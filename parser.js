@@ -1,8 +1,9 @@
 const bl = require('bl')
-const EventEmitter = require('events')
+const events = require('events')
 const Packet = require('./packet')
 const constants = require('./constants')
 const debug = require('debug')('mqtt-packet:parser')
+const { EventEmitter } = events
 
 class Parser extends EventEmitter {
   constructor () {
